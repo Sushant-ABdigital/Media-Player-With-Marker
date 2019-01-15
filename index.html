@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>MediaElement.js 3.0 - audio/video unification library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="mediaelementplayer.css" />
+    <link rel="stylesheet" href="mycss.css" />
+    <!-- <script src="timeline.json"></script> -->
+    <style>
+      html,
+      body {
+        overflow-x: hidden;
+      }
+
+      #container {
+        padding: 0 20px 50px;
+      }
+      .error {
+        color: red;
+      }
+      a {
+        word-wrap: break-word;
+      }
+
+      code {
+        font-size: 0.8em;
+      }
+
+      #player2-container .mejs__time-buffering,
+      #player2-container .mejs__time-current,
+      #player2-container .mejs__time-handle,
+      #player2-container .mejs__time-loaded,
+      #player2-container .mejs__time-hovered,
+      #player2-container .mejs__time-marker,
+      #player2-container .mejs__time-total {
+        height: 2px;
+      }
+
+      #player2-container .mejs__time-total {
+        margin-top: 9px;
+      }
+      #player2-container .mejs__time-handle {
+        left: -5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #ffffff;
+        top: -5px;
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        z-index: 2;
+        border: none;
+      }
+      #player2-container .mejs__time-handle-content {
+        top: 0;
+        left: 0;
+        width: 12px;
+        height: 12px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <section>
+        <h1>MediaElement.js</h1>
+
+        <h2><em>audio/video</em> unification library</h2>
+
+      <div class="players" id="player2-container">
+        <h3>Audio Player</h3>
+
+        <p>
+          By default, time handle element is hidden, but in this demo the
+          following styles were added to display it just for audio:
+        </p>
+        <div class="media-wrapper">
+          <audio id="player2" preload="none" controls style="max-width:100%;">
+            <source
+              src="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3"
+              type="audio/mp3"
+            />
+          </audio>
+        </div>
+        <br />
+        <div>
+          <label
+            >Sources
+            <select name="sources">
+              <option
+                value="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3"
+                >MP3</option
+              >
+              <option
+                value="http://www.vorbis.com/music/Hydrate-Kenny_Beltrey.ogg"
+                >OGG</option
+              >
+              <option
+                value="http://db3.indexcom.com/bucket/ram/00/05/64k/05.m3u8"
+                >HLS</option
+              >
+              <option
+                value="https://api.soundcloud.com/tracks/323195515/stream?client_id=95f22ed54a5c297b1c41f72d713623ef"
+                >SoundCloud</option
+              >
+            </select>
+          </label>
+        </div>
+        <br />
+        <div class="player-info">
+          <h4>Player information</h4>
+          <div id="player2-rendername">
+            <p>
+              <strong>Source</strong>:
+              <span class="src"
+                ><a
+                  href="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3"
+                  target="_blank"
+                  >http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3</a
+                ></span
+              >
+            </p>
+            <p>
+              <strong>Renderer</strong>: <span class="renderer">html5</span>
+            </p>
+            <p class="error"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="mediaelement-and-player.js"></script>
+    <script src="selfmarker.js"></script>
+    <script src="demo.js"></script>
+    <script src="demo1.js"></script>
+  </body>
+</html>

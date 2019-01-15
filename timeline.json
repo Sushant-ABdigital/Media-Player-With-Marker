@@ -1,0 +1,14 @@
+﻿{
+  "StartTimeInMin": "0",
+  "EndTimeInMin": "60",
+  "event": [
+    {
+      "EventTimeMin": "4",
+      "EventType": "1"
+    },
+    {
+      "EventTimeMin": "10",
+      "EventType": "2"
+    }
+  ]
+}
