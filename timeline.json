@@ -3,16 +3,24 @@
   "EndTimeInMin": "60",
   "event": [
     {
-      "EventTimeMin": "4",
+      "EventTimeMin": "2",
       "EventType": "1"
     },
     {
-      "EventTimeMin": "10",
-      "EventType": "2"
+      "EventTimeMin": "8",
+      "EventType": "6"
     },
     {
       "EventTimeMin": "16",
-      "EventType": "1"
+      "EventType": "4"
+    },
+    {
+      "EventTimeMin": "28",
+      "EventType": "6"
+    },
+    {
+      "EventTimeMin": "34",
+      "EventType": "7"
     }
   ]
 }
