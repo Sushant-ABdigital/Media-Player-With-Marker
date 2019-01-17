@@ -9,6 +9,10 @@
     {
       "EventTimeMin": "10",
       "EventType": "2"
+    },
+    {
+      "EventTimeMin": "16",
+      "EventType": "1"
     }
   ]
 }

@@ -43,7 +43,6 @@
     1: [
       function(_dereq_, module, exports) {
         "use strict";
-
         Object.assign(mejs.MepDefaults, {
           markerColor: "#BADA55",
 
@@ -56,7 +55,7 @@
         Object.assign(MediaElementPlayer.prototype, {
           buildmarkers: function buildmarkers(player, controls, layers, media) {
             if (!player.options.markers.length) {
-              console.log('no markers length');
+              console.log("no markers length");
               return;
             }
 
@@ -73,6 +72,8 @@
             ) {
               var marker = document.createElement("span");
               marker.className = t.options.classPrefix + "time-marker";
+              console.log(typeData[0]);
+              marker.setAttribute("id", "theid " + typeData[i]);
               controls
                 .querySelector("." + t.options.classPrefix + "time-total")
                 .appendChild(marker);
@@ -118,7 +119,7 @@
               markers = controls.querySelectorAll(
                 "." + t.options.classPrefix + "time-marker"
               );
-
+            console.log(t.options);
             for (var i = 0, total = t.options.markers.length; i < total; ++i) {
               if (
                 Math.floor(t.options.markers[i]) <= t.media.duration &&
@@ -133,7 +134,25 @@
                 marker.style.transform = "rotate" + "(" + 45 + "deg)";
                 marker.style.top = -7 + "px";
                 marker.style.left = left + "%";
-                marker.style.background = t.options.markerColor;
+                // marker.style.background = setColor();
+                setColor();
+                console.log(typeData[0]);
+                console.log(typeData[1]);
+                function setColor() {
+                  if (typeData[0] == 1) {
+                    console.log("number 1");
+                    marker.style.background = "blue";
+                    return "blue";
+                  } else if (typeData[1] == 2) {
+                    console.log("number 2");
+                    marker.style.background = "green";
+                    return "green";
+                  } else {
+                    console.log("number 3");
+                    marker.style.background = "red";
+                    return "red";
+                  }
+                }
               }
             }
           }
