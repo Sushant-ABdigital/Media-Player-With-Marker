@@ -9,7 +9,6 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="mediaelementplayer.css" />
     <link rel="stylesheet" href="mycss.css" />
-    <!-- <script src="timeline.json"></script> -->
     <style>
       html,
       body {
@@ -68,17 +67,9 @@
   <body>
     <div id="container">
       <section>
-        <h1>MediaElement.js</h1>
-
-        <h2><em>audio/video</em> unification library</h2>
+        <h1>Audio Player with Timeline Marker</h1>
 
       <div class="players" id="player2-container">
-        <h3>Audio Player</h3>
-
-        <p>
-          By default, time handle element is hidden, but in this demo the
-          following styles were added to display it just for audio:
-        </p>
         <div class="media-wrapper">
           <audio id="player2" preload="none" controls style="max-width:100%;">
             <source
@@ -128,6 +119,7 @@
             <p>
               <strong>Renderer</strong>: <span class="renderer">html5</span>
             </p>
+            <p>The event marker is unique to event type. Change the JSON file ('event type') and the color of marker will change.</p>
             <p class="error"></p>
           </div>
         </div>
