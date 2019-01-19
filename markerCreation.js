@@ -36,12 +36,12 @@ let player = new MediaElementPlayer("player2", {
     "fullscreen"
   ],
   markers: minuteMarkers,
+  //Below is the function to add call back when marker time reached. if any.
   markerCallback: function(media, time) {
     console.log(time);
   }
 });
 let ids = document.querySelectorAll(".mejs__time-marker");
-console.log(ids);
 ids.forEach(function(e) {
   let colors = [
     "#0984e3",

@@ -72,7 +72,6 @@
             ) {
               var marker = document.createElement("span");
               marker.className = t.options.classPrefix + "time-marker";
-              console.log(typeData[0]);
               marker.setAttribute("id", typeData[i]);
               controls
                 .querySelector("." + t.options.classPrefix + "time-total")
